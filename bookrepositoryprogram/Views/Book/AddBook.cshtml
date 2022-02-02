@@ -1,0 +1,30 @@
+﻿@model bookrepositoryprogram.Models.book
+
+<div class="container-fluid" m-3>
+    <h2>Wpisz dane książki</h2>
+    <form asp-controller="Book" asp-action="Add" method="post">
+        <div class="mb-3">
+            <span asp-validation-for="Title" class="text-danger"></span>
+            <label asp-for="Title">Tytuł</label>
+            <input class="form-control" asp-for="Title" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Author" class="text-danger"></span>
+            <label asp-for="Author">Autor</label>
+            <input class="form-control" asp-for="Author" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="PublishingYear" class="text-danger"></span>
+            <label asp-for="PublishingYear">Rok wydania</label>
+            <input class="form-control" asp-for="PublishingYear" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Price" class="text-danger"></span>
+            <label asp-for="Price">Cena</label>
+            <input class="form-control" asp-for="Price" />
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Zapisz</button>
+        </div>
+    </form>
+</div>
